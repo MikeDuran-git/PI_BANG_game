@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Bang !" company="" webLink="http://" view-date="2020-02-03" view-index="0" gantt-divider-location="490" resource-divider-location="449" version="2.8.10" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Bang !" company="" webLink="http://" view-date="2020-02-10" view-index="0" gantt-divider-location="490" resource-divider-location="449" version="2.8.10" locale="fr">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="376" order="0"/>
-        <field id="tpd4" name="Date de début" width="56" order="1"/>
-        <field id="tpd5" name="Date de fin" width="54" order="2"/>
-        <option id="color.recent"><![CDATA[#ff0066 #000000 #009999 #ffcc33 #009900 #ff6600 #3333ff #999999 #660066 #006666]]></option>
+        <field id="tpd3" name="Nom" width="364" order="0"/>
+        <field id="tpd4" name="Date de début" width="54" order="1"/>
+        <field id="tpd5" name="Date de fin" width="53" order="2"/>
+        <option id="color.recent"><![CDATA[#009999 #999999 #009900 #ffcc33 #ff0066 #000000 #ff6600 #3333ff #660066 #006666]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="280" order="0"/>
@@ -36,57 +36,67 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Noyau" color="#ff6600" meeting="false" start="2020-02-03" duration="21" complete="33" thirdDate="2020-01-29" thirdDate-constraint="0" expand="true">
+        <task id="0" name="Noyau" color="#ff6600" meeting="false" start="2020-02-03" duration="21" complete="66" thirdDate="2020-01-29" thirdDate-constraint="0" expand="true">
             <task id="85" name="N - Spécification du noyau" color="#ff6600" meeting="false" start="2020-02-03" duration="7" complete="100" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
                 <depend id="87" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="87" name="N - Codage des différentes fonctions spécifié" color="#ff6600" meeting="false" start="2020-02-10" duration="7" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true">
+            <task id="87" name="N - Codage des différentes fonctions spécifié" color="#ff6600" meeting="false" start="2020-02-10" duration="7" complete="100" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Séparer les fonctions spécifié la semaine avant sur les différentes personnes s'occupant du noyau]]></notes>
                 <depend id="400" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="400" name="N - Assemblage des différentes fonctions codé" color="#ff6600" meeting="false" start="2020-02-17" duration="7" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
                 <depend id="43" type="2" difference="0" hardness="Strong"/>
                 <depend id="111" type="2" difference="0" hardness="Strong"/>
+                <depend id="147" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="6" name="Réseau" color="#009900" meeting="false" start="2020-02-03" duration="63" complete="14" thirdDate="2020-02-13" thirdDate-constraint="0" expand="true">
-            <task id="356" name="R -Recherche sur le fonctionnement du réseaux sur Godot" color="#009900" meeting="false" start="2020-02-03" duration="7" complete="100" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true"/>
-            <task id="69" name="R -Faire communiquer Godot et le serveur" color="#009900" meeting="false" start="2020-02-17" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[Faire les premières connexion entre Godot et l'IHM avec la connexion et l'inscription, vérifier que les informations passe bien d'un point à l'autre et qu'ils sont utilisable]]></notes>
+        <task id="6" name="Réseau" color="#009900" meeting="false" start="2020-02-03" duration="77" complete="11" thirdDate="2020-02-13" thirdDate-constraint="0" expand="true">
+            <task id="356" name="Res -Recherche sur le fonctionnement du réseaux sur Godot" color="#009900" meeting="false" start="2020-02-03" duration="7" complete="100" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true"/>
+            <task id="69" name="Res -Faire communiquer Godot et le serveur" color="#009900" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Faire les premières connexion entre Godot et l'IHM avec la connexion et l'inscription, vérifier que les informations passe bien d'un point à l'autre et qu'ils sont utilisable
+Et faire une spécification des fonctions]]></notes>
+                <depend id="535" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="111" name="R -Faire communiquer le noyau et le serveur 1" color="#009900" meeting="false" start="2020-02-24" duration="7" complete="0" thirdDate="2020-03-02" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[Faire en sorte que le serveur et le noyau communique correctement et passe toute les informations qui devront communiquer pour le fonctionnement du jeu:
--Entré d'un joueur dans la partie
--tour d'un joueur
--résultat des dès
--Sélection des cibles pour appliquer les effets des dès
--Déconnexion d'un joueur
--perte ou gain de point de vie
--mort d'un joueur]]></notes>
+            <task id="111" name="Res -Faire communiquer le noyau et le serveur 1" color="#009900" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-03-02" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Faire en sorte que le serveur et le noyau communique correctement et passe toute les informations qui devront communiquer pour le fonctionnement du jeu
+Et faire une spécification des fonctions]]></notes>
                 <depend id="402" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="402" name="R -Faire communiquer le tout ensemble" color="#009900" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-                <notes><![CDATA[Faire en sorte que le serveur sert de passerel entre godot et le noyau
+            <task id="535" name="Res -Coder les fonctions pour interface" color="#009900" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true">
+                <depend id="419" type="2" difference="0" hardness="Strong"/>
+                <depend id="540" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="402" name="Res -Coder les fonctions pour noyau" color="#009900" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+                <notes><![CDATA[Coder les fonctions spécifier précédement
 ]]></notes>
                 <depend id="419" type="2" difference="0" hardness="Strong"/>
+                <depend id="540" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="419" name="R -Relier BDD au serveur" color="#009900" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true"/>
-            <task id="71" name="R -création de plusieurs serveur" color="#009900" meeting="false" start="2020-03-23" duration="14" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true">
+            <task id="540" name="Res - Regrouper les fonctions codées" color="#009900" meeting="false" start="2020-03-16" duration="7" complete="0" thirdDate="2020-02-03" thirdDate-constraint="0" expand="true">
+                <depend id="419" type="2" difference="0" hardness="Strong"/>
+                <depend id="589" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="419" name="Res -Relier BDD au serveur" color="#009900" meeting="false" start="2020-03-23" duration="7" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true">
+                <depend id="71" type="2" difference="0" hardness="Strong"/>
+                <depend id="201" type="2" difference="0" hardness="Strong"/>
+                <depend id="437" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="71" name="Res -création de plusieurs serveur" color="#009900" meeting="false" start="2020-04-06" duration="14" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Faire en sorte que plusieurs partie puisse se réaliser simultanément
 ]]></notes>
                 <depend id="185" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="10" name="BDD" color="#00cccc" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-            <task id="31" name="B -Création de la base + reqûetes" color="#33ccff" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-02-24" thirdDate-constraint="0" expand="true">
+        <task id="10" name="BDD" color="#00cccc" meeting="false" start="2020-03-09" duration="14" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+            <task id="31" name="B -Création de la base + reqûetes" color="#33ccff" meeting="false" start="2020-03-09" duration="14" complete="0" thirdDate="2020-02-24" thirdDate-constraint="0" expand="true">
                 <depend id="419" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="12" name="Graphisme" color="#3333ff" meeting="false" start="2020-02-03" duration="63" complete="16" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+        <task id="12" name="Graphisme" color="#3333ff" meeting="false" start="2020-02-03" duration="49" complete="33" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
             <task id="359" name="G -Conception des éléments essentiels du plateau de jeu" color="#3333ff" meeting="false" start="2020-02-03" duration="7" complete="100" thirdDate="2020-02-03" thirdDate-constraint="0" expand="true">
                 <depend id="360" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="360" name="G -Conception de la connexion et inscription + plateau" color="#3333ff" meeting="false" start="2020-02-10" duration="7" complete="0" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true">
+            <task id="360" name="G -Conception de la connexion et inscription + plateau" color="#3333ff" meeting="false" start="2020-02-10" duration="7" complete="100" thirdDate="2020-02-10" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[-page de connexion
 - page d'inscription
 - amélioration du plateau (position des cartes personnages et bouton autour du plateau)]]></notes>
@@ -101,77 +111,94 @@ et page d'ami]]></notes>
             </task>
             <task id="60" name="G -Assemblage des différentes pages" color="#3333ff" meeting="false" start="2020-02-24" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Relier toute les pages entre elles, faire attention à ne pas oublié une transition]]></notes>
+                <depend id="69" type="2" difference="0" hardness="Strong"/>
+                <depend id="147" type="2" difference="0" hardness="Strong"/>
                 <depend id="335" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="197" name="G -Amélioration visuel" color="#3333ff" meeting="false" start="2020-03-23" duration="14" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
+            <task id="197" name="G -Amélioration visuel" color="#3333ff" meeting="false" start="2020-03-09" duration="14" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Améliorer en priorité le plateau en 2D puis les menus et pur finir si il y a le temps quelque élément en 3D
 ]]></notes>
                 <depend id="185" type="2" difference="0" hardness="Strong"/>
+                <depend id="589" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="445" name="Export" color="#009999" meeting="false" start="2020-04-13" duration="14" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
-            <task id="447" name="Export du logiciel" color="#009999" meeting="false" start="2020-04-13" duration="14" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
+        <task id="445" name="Export" color="#009999" meeting="false" start="2020-04-06" duration="28" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
+            <task id="447" name="Export du logiciel" color="#009999" meeting="false" start="2020-04-06" duration="14" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
                 <notes><![CDATA[Tentative d'export en page web
 
 Si échec total essayer avec mobile et lister les différentes modification à apporter à l'IHM pour pouvoir prendre en compte]]></notes>
+                <depend id="497" type="2" difference="0" hardness="Strong"/>
+                <depend id="663" type="2" difference="0" hardness="Strong"/>
             </task>
+            <task id="663" name="Export avec modification" color="#009999" meeting="false" start="2020-04-27" duration="7" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="13" name="Mise en commun/Test" color="#ffcc33" meeting="false" start="2020-02-24" duration="56" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+        <task id="13" name="Mise en commun/Test" color="#ffcc33" meeting="false" start="2020-02-24" duration="70" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
             <task id="335" name="T&amp;D:G - Test interface" color="#ffcc33" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-03-02" thirdDate-constraint="0" expand="true">
-                <depend id="63" type="2" difference="0" hardness="Strong"/>
+                <depend id="197" type="2" difference="0" hardness="Strong"/>
+                <depend id="437" type="2" difference="0" hardness="Strong"/>
+                <depend id="589" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="43" name="T&amp;D:N -Test et debug noyau" color="#ffcc33" meeting="false" start="2020-02-24" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-                <depend id="63" type="2" difference="0" hardness="Strong"/>
+                <depend id="111" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="63" name="T&amp;D -Test et débug du tout (sauf BDD)" color="#ffcc33" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-                <depend id="437" type="2" difference="0" hardness="Strong"/>
+            <task id="437" name="T&amp;D -Test et debug du tout avec BDD" color="#ffcc33" meeting="false" start="2020-03-30" duration="7" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
+                <depend id="71" type="2" difference="0" hardness="Strong"/>
+                <depend id="90" type="2" difference="0" hardness="Strong"/>
+                <depend id="447" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="437" name="T&amp;D -Test et debug du tout avec BDD" color="#ffcc33" meeting="false" start="2020-03-16" duration="7" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
+            <task id="589" name="T&amp;D -Test et debug du tout (sans BDD)" color="#ffcc33" meeting="false" start="2020-03-23" duration="7" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true" cost-manual-value="0.0" cost-calculated="true">
                 <depend id="71" type="2" difference="0" hardness="Strong"/>
                 <depend id="90" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="185" name="T&amp;D -Mise en commun et débug + test" color="#ffcc33" meeting="false" start="2020-04-06" duration="7" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
+            <task id="185" name="T&amp;D -Mise en commun et débug + test" color="#ffcc33" meeting="false" start="2020-04-20" duration="7" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
                 <depend id="355" type="2" difference="0" hardness="Strong"/>
+                <depend id="663" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="355" name="T&amp;D -Test et debug suite" color="#ffcc33" meeting="false" start="2020-04-13" duration="7" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true"/>
+            <task id="355" name="T&amp;D -Test et debug suite" color="#ffcc33" meeting="false" start="2020-04-27" duration="7" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="81" name="IA" color="#333300" meeting="false" start="2020-03-23" duration="14" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-            <task id="90" name="Ajout d'IA au noyau" color="#333300" meeting="false" start="2020-03-23" duration="14" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
+        <task id="81" name="IA" color="#333300" meeting="false" start="2020-04-06" duration="14" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+            <task id="90" name="Ajout d'IA au noyau" color="#333300" meeting="false" start="2020-04-06" duration="14" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
                 <depend id="185" type="2" difference="0" hardness="Strong"/>
+                <depend id="217" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="18" name="Hors code" color="#990099" meeting="false" start="2020-03-09" duration="42" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-            <task id="100" name="Communication" color="#ff0066" meeting="false" start="2020-03-09" duration="35" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
-                <task id="107" name="C -Décision + études" color="#ff0066" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
+        <task id="18" name="Hors code" color="#990099" meeting="false" start="2020-03-02" duration="63" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+            <task id="100" name="Communication" color="#ff0066" meeting="false" start="2020-03-23" duration="35" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
+                <task id="107" name="C -Décision + études" color="#ff0066" meeting="false" start="2020-03-23" duration="7" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[Chercher ce que l'on va pouvoir proposer en terme de communication pour notre projet (une vidéo publicitaire, une affiche, etc...)
 Et faire une étude du marché de jeu similaire et déjà existant.]]></notes>
                     <depend id="169" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="169" name="C -Mise en place de la décision" color="#ff0066" meeting="false" start="2020-03-16" duration="7" complete="0" thirdDate="2020-03-08" thirdDate-constraint="0" expand="true"/>
-                <task id="497" name="Finalisation de la communication" color="#ff0066" meeting="false" start="2020-04-06" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+                <task id="169" name="C -Mise en place de la décision" color="#ff0066" meeting="false" start="2020-03-30" duration="7" complete="0" thirdDate="2020-03-08" thirdDate-constraint="0" expand="true">
+                    <depend id="497" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="497" name="C -Finalisation de la communication" color="#ff0066" meeting="false" start="2020-04-20" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[Finir la mise en place de la décision si elle n'est pas fini, et mettre en forme tout le dossier sur la communication, le montrer à des gens exeterne au projet pour savoir ce qu'ils en pensent et faire les modifications possible en fonction de ces remarques.]]></notes>
                 </task>
             </task>
-            <task id="104" name="Rapport" color="#999999" meeting="false" start="2020-03-16" duration="35" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
-                <task id="147" name="R -Première écriture" color="#999999" meeting="false" start="2020-03-16" duration="7" complete="0" thirdDate="2020-03-17" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[Rapport concernant le serveur
-Rapport convernant la BDD + aider benjamin quand la BDD sera fini
+            <task id="104" name="Rapport" color="#999999" meeting="false" start="2020-03-02" duration="63" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
+                <task id="147" name="Rap -Ecriture noyau+Interface" color="#999999" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-03-17" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Rapport concernant le noyau
 Rapport sur l'interface 
 
 
 ]]></notes>
                 </task>
-                <task id="201" name="R -Suite" color="#999999" meeting="false" start="2020-04-06" duration="7" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
+                <task id="201" name="Rap -Ecriture BDD+ réseau" color="#999999" meeting="false" start="2020-03-30" duration="7" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[Rappport sur la création des IA 
 Rapport sur les modification apporté au réseau
 ]]></notes>
                     <depend id="217" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="217" name="R -Suite 3" color="#999999" meeting="false" start="2020-04-13" duration="7" complete="0" thirdDate="2020-01-13" thirdDate-constraint="0" expand="true">
-                    <notes><![CDATA[Introduction et conclusion + mise en forme + rapport sur le communication
+                <task id="217" name="Rap -Ecrtiure IA + amélioration réseau + exportation" color="#999999" meeting="false" start="2020-04-20" duration="7" complete="0" thirdDate="2020-01-13" thirdDate-constraint="0" expand="true">
+                    <notes><![CDATA[Faire le résumé de l'export 
+
+Si ils ont été fait faire l'IA et l'amélioration du réseau
 
 ]]></notes>
+                    <depend id="627" type="2" difference="0" hardness="Strong"/>
                 </task>
+                <task id="627" name="Rap -Finalisation du rapport" color="#999999" meeting="false" start="2020-04-27" duration="7" complete="0" thirdDate="2020-04-27" thirdDate-constraint="0" expand="true"/>
             </task>
         </task>
     </tasks>
@@ -186,86 +213,98 @@ Rapport sur les modification apporté au réseau
         <resource id="8" name="Nawfal Eddaoudi" function="Default:0" contacts="" phone=""/>
     </resources>
     <allocations>
-        <allocation task-id="31" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="359" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="360" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="106" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="60" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="107" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="197" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="147" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="185" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="217" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="201" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="447" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="217" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="627" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="85" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="87" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="43" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="90" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="400" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="31" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="63" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="437" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="497" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="217" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="147" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="419" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="185" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="355" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="85" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="87" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="69" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="111" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="90" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="402" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="63" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="437" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="201" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="355" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="400" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="43" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="540" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="419" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="201" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="185" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="85" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="87" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="111" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="400" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="402" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="71" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="63" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="169" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="201" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="217" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="43" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="540" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="589" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="355" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="497" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="69" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="356" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="111" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="402" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="419" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="147" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="360" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="71" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="185" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="447" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="106" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="60" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="535" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="540" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="419" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="201" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="217" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="663" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="69" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="31" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="90" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="359" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="360" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="111" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="419" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="147" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="185" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="355" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="106" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="60" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="535" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="540" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="589" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="169" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="217" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="106" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="60" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="197" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="335" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="359" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="360" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="107" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="169" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="185" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="355" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="197" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="447" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="663" resource-id="7" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="497" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="85" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="87" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="63" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="335" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="43" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="106" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="197" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="437" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="497" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="447" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="400" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="43" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="589" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="185" resource-id="8" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="663" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>
