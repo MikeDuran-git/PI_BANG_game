@@ -49,7 +49,7 @@
             </task>
             <task id="727" name="N -Ajout des différents personnages + faire le main" color="#ff6600" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-02-03" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="6" name="Réseau" color="#009900" meeting="false" start="2020-02-03" duration="77" complete="0" thirdDate="2020-02-13" thirdDate-constraint="0" expand="true">
+        <task id="6" name="Réseau" color="#009900" meeting="false" start="2020-02-03" duration="84" complete="0" thirdDate="2020-02-13" thirdDate-constraint="0" expand="true">
             <task id="356" name="Res -Recherche sur le fonctionnement du réseaux sur Godot" color="#009900" meeting="false" start="2020-02-03" duration="7" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true"/>
             <task id="664" name="Res - Test sur le fonctionnement du réseau" color="#009900" meeting="false" start="2020-03-02" duration="7" complete="0" thirdDate="2020-03-02" thirdDate-constraint="0" expand="true">
                 <depend id="69" type="2" difference="0" hardness="Strong"/>
@@ -72,13 +72,13 @@ Et faire une spécification des fonctions]]></notes>
                 <depend id="419" type="2" difference="0" hardness="Strong"/>
                 <depend id="589" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="419" name="Res -Faire la connexion IHM-Noyau" color="#009900" meeting="false" start="2020-03-30" duration="21" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="10" name="BDD" color="#00cccc" meeting="false" start="2020-03-23" duration="21" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
-            <task id="31" name="B -Création de la base + reqûetes" color="#33ccff" meeting="false" start="2020-03-23" duration="7" complete="0" thirdDate="2020-02-24" thirdDate-constraint="0" expand="true">
-                <depend id="880" type="2" difference="0" hardness="Strong"/>
+            <task id="419" name="Res -Faire la connexion IHM-Noyau" color="#009900" meeting="false" start="2020-03-30" duration="28" complete="0" thirdDate="2020-01-20" thirdDate-constraint="0" expand="true">
+                <depend id="663" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="880" name="B -Intégrer la BDD" color="#00cccc" meeting="false" start="2020-03-30" duration="14" complete="0" thirdDate="2020-02-03" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="10" name="BDD" color="#00cccc" meeting="false" start="2020-03-23" duration="34" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+            <task id="31" name="B -Création de la base + reqûetes" color="#33ccff" meeting="false" start="2020-03-23" duration="7" complete="0" thirdDate="2020-02-24" thirdDate-constraint="0" expand="true"/>
+            <task id="880" name="B -Intégrer la BDD" color="#00cccc" meeting="false" start="2020-04-09" duration="17" complete="0" thirdDate="2020-02-03" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="12" name="Graphisme" color="#3333ff" meeting="false" start="2020-02-03" duration="49" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
             <task id="359" name="G -Conception des éléments essentiels du plateau de jeu" color="#3333ff" meeting="false" start="2020-02-03" duration="7" complete="0" thirdDate="2020-02-03" thirdDate-constraint="0" expand="true">
@@ -111,9 +111,11 @@ et page d'ami]]></notes>
                 <depend id="812" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="812" name="G -Corriger tout les bugs/détails" color="#3333ff" meeting="false" start="2020-03-23" duration="21" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true"/>
-        <task id="445" name="Export" color="#009999" meeting="false" start="2020-04-27" duration="4" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
-            <task id="663" name="Export du logiciel" color="#009999" meeting="false" start="2020-04-27" duration="4" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
+        <task id="812" name="G -Corriger tout les bugs/détails" color="#3333ff" meeting="false" start="2020-03-23" duration="35" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
+            <depend id="663" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="445" name="Export" color="#009999" meeting="false" start="2020-04-27" duration="3" complete="0" thirdDate="2020-03-23" thirdDate-constraint="0" expand="true">
+            <task id="663" name="Export du logiciel" color="#009999" meeting="false" start="2020-04-27" duration="3" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
                 <depend id="877" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
@@ -126,7 +128,7 @@ et page d'ami]]></notes>
                 <depend id="663" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="18" name="Hors code" color="#990099" meeting="false" start="2020-03-09" duration="58" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
+        <task id="18" name="Hors code" color="#990099" meeting="false" start="2020-03-09" duration="57" complete="0" thirdDate="2020-01-27" thirdDate-constraint="0" expand="true">
             <task id="100" name="Communication" color="#ff0066" meeting="false" start="2020-03-30" duration="27" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
                 <task id="107" name="C -Décision + études" color="#ff0066" meeting="false" start="2020-03-30" duration="7" complete="0" thirdDate="2020-02-17" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[Chercher ce que l'on va pouvoir proposer en terme de communication pour notre projet (une vidéo publicitaire, une affiche, etc...)
@@ -138,7 +140,7 @@ Et faire une étude du marché de jeu similaire et déjà existant.]]></notes>
                     <notes><![CDATA[Finir la mise en place de la décision si elle n'est pas fini, et mettre en forme tout le dossier sur la communication, le montrer à des gens exeterne au projet pour savoir ce qu'ils en pensent et faire les modifications possible en fonction de ces remarques.]]></notes>
                 </task>
             </task>
-            <task id="104" name="Rapport" color="#999999" meeting="false" start="2020-03-09" duration="58" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
+            <task id="104" name="Rapport" color="#999999" meeting="false" start="2020-03-09" duration="57" complete="0" thirdDate="2020-03-16" thirdDate-constraint="0" expand="true">
                 <task id="147" name="Rap -Ecriture noyau" color="#999999" meeting="false" start="2020-03-09" duration="7" complete="0" thirdDate="2020-03-17" thirdDate-constraint="0" expand="true">
                     <notes><![CDATA[Rapport concernant le noyau
 Rapport sur l'interface 
@@ -159,14 +161,14 @@ Si ils ont été fait faire l'IA
 
 ]]></notes>
                 </task>
-                <task id="823" name="C - Préparer la présentation des règles" color="#ff0066" meeting="false" start="2020-03-31" duration="7" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
+                <task id="823" name="C - Préparer la présentation des règles" color="#ff0066" meeting="false" start="2020-03-31" duration="8" complete="0" thirdDate="2020-03-30" thirdDate-constraint="0" expand="true">
                     <depend id="874" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="874" name="C - Préparation de la présentation" color="#ff0066" meeting="false" start="2020-04-07" duration="12" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
+                <task id="874" name="C - Préparation de la présentation" color="#ff0066" meeting="false" start="2020-04-08" duration="17" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
                     <depend id="875" type="2" difference="0" hardness="Strong"/>
                 </task>
-                <task id="875" name="C - tournage de la présentation" color="#ff0066" meeting="false" start="2020-04-19" duration="8" complete="0" thirdDate="2020-04-13" thirdDate-constraint="0" expand="true"/>
-                <task id="877" name="C - tournage démo" color="#ff0066" meeting="false" start="2020-05-01" duration="5" complete="0" thirdDate="2020-04-20" thirdDate-constraint="0" expand="true"/>
+                <task id="875" name="C - tournage de la présentation" color="#ff0066" meeting="false" start="2020-04-25" duration="5" complete="0" thirdDate="2020-04-13" thirdDate-constraint="0" expand="true"/>
+                <task id="877" name="C - tournage démo" color="#ff0066" meeting="false" start="2020-04-30" duration="5" complete="0" thirdDate="2020-04-20" thirdDate-constraint="0" expand="true"/>
             </task>
         </task>
     </tasks>
