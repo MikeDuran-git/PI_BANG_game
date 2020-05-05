@@ -219,7 +219,10 @@ Vous pouvez voir sur \textbf{la figure 1} les différentes catégories ainsi que
 
 \newpage
 
-Nous avons ainsi pu mettre à jour les rôles d’un membre changeant d’équipe. Ce système était un moyen supplémentaire d’informations qui permettait à chacun de connaître, à tout instant, le statut des autres membres. Les rôles servaient également à contacter de façon exclusive les personnes travaillant avec nous.  En tapant « @IHM », par exemple, cela permet d’envoyer une notification de message uniquement aux membres du groupe  “IHM” (\textbf{la figure 2 ci-dessus}) \\\\
+Nous avons ainsi pu mettre à jour les rôles d’un membre changeant d’équipe. Ce système était un moyen supplémentaire d’informations qui permettait à chacun de connaître, à tout instant, le statut des autres membres. Les rôles servaient également à contacter de façon exclusive les personnes travaillant avec nous.  En tapant « @IHM », par exemple, cela permet d’envoyer une notification de message uniquement aux membres du groupe  “IHM” (\textbf{la figure 2 ci-dessus}) \\
+
+Ce serveur discord nous permettait de discuter des différents avancements du projet et d’établir des listes des changement à effectuer. Avec la fonctionnalité d’épingler des messages, nous pouvons établir une liste et la garder accessible rapidement sans devoir la chercher. Nous avons notamment épinglé, de cette façon, les liens du google document ou encore du time sheet. \\
+
 
 \begin{figure}
 	\begin{center}
@@ -399,6 +402,15 @@ Cette architecture se base sur 4 caractéristiques:  \\
 \end{enumerate}
 
 \subsubsection{Les messages} 
+
+Le protocole de communication mis en place pour communiquer entre les clients et le serveur découle des différentes phases de jeu qu’on a extrait des règles. Nous en avons décomposées 5. Ceci nous a poussé à créer 5 types de messages. De plus, puisque le nombre de messages et le contenu n’était pas très volumineux, nous avons décidé d’utiliser des chaînes de caractères comme moyen de transmission des informations. \\
+
+	Toutes ces chaînes de caractères possèdent 2 types de séparateur. La virgule qui sépare des données (identifiant + valeur) ou des spécifications (définit le type de données qui va suivre) et les doubles points ( : ) qui séparent un identifiant de sa valeur. \\
+	
+	Pour rendre ces chaînes de caractères utilisables aisément, nous avons mis en place une fonction de parsing qui transforme ces chaînes en dictionnaires. Ainsi,il suffit de connaître la spécification et l’identifiant d’une donnée afin d’accéder à sa valeur.
+
+En fonction de la phase dans laquelle se trouve le jeu, la partie, les messages qui doivent s’échanger entre le client et le serveur doivent être différents. Ainsi, pour pouvoir les différencier chaque chaîne envoyée doit commencer par un caractère spécial qui est considéré comme une spécification. \\
+
 
 \begin{enumerate}
 	\item \textbf{La connexion} \\
