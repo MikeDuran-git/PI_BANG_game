@@ -89,7 +89,7 @@
 
     Pendant la programmation du réseau, nous avons consacré quelques semaines à la création de la base de données liée au jeu. Celle-ci nous permet la création de comptes utilisateurs et les statistiques qui leurs sont liées, telles que le nombre de victoires ou de défaites. \\
 
-	Une fois le réseau terminé, nous nous sommes concentrés sur les corrections de bogues. Nous avons également testé l’exportation, et apporté de nouvelles améliorations  à l’interface afin de la rendre plus agréable et compréhensible. Nous avons fini par intégrer la BDD lorsque l’aspect technique du jeu fut finalisé et présentable. \\ 
+	Une fois le réseau terminé, nous nous sommes concentrés sur les corrections de bugs. Nous avons également testé l’exportation, et apporté de nouvelles améliorations  à l’interface afin de la rendre plus agréable et compréhensible. Nous avons fini par intégrer la BDD lorsque l’aspect technique du jeu fut finalisé et présentable. \\ 
 
     En dernier, nous avons procédé à l’exportation du projet avec de légères adaptations grâce à l’outil d'exportation intégré à Godot Engine.
 
@@ -245,10 +245,8 @@ Vous pouvez voir sur \textbf{la figure 1} les différentes catégories ainsi que
 
 \begin{enumerate}
 	\item \textbf{La boucle principale} \\\\
-	Lorsque le noyau du jeu est lancé, celui-ci crée le plateau : il instancie la classe board qui est le cœur du jeu. La classe board, lorsqu’elle est instanciée, crée les personnages de manière aléatoire et attribue les rôles, aussi de manière aléatoire. Elle crée aussi le tableau de dés, utiles pour simplifier les interactions. Les instances de Player ont toutes accès au board (leur créateur) afin d’utiliser certaines méthodes.  \\
-    Une fois que tout cela est fait, les personnages et rôles attribués à chaque joueur sont révélés à ces derniers en créant un dictionnaire via la méthode reveal() de board et en l’affichant depuis le main. La boucle du jeu fonctionne comme suit : on demande à l’utilisateur quels dés il souhaite relancer (tous les dés sont automatiquement sélectionnés si c’est le premier lancer) et on lance la méthode playerAction de board qui s’occupe des effets immédiats tels que les flèches ou la dynamite. 
-    Les dés étant des dynamites sont bloqués et ne sont donc pas relancés même s’ils sont sélectionnés. Lors du passage au joueur suivant ils sont alors débloqués. Tant que le joueur qui joue a le droit de relancer les dés, ces opérations sont répétées. Si le joueur souhaite finir son tour, son nombre de lancers restants passe à 0 puis on effectue l’application des effets et on passe au joueur suivant. 
-    S' il meurt pendant son tour ou s' il reçoit 3 dynamites, les effets ne sont pas appliqués (l’attribut de board silenced passe à 1 pour dire que les effets ne sont pas pris en compte). Cette dernière fonctionnalité a ensuite été changée dans la version en ligne du noyau car elle était dûe à une erreur dans la compréhension des règles. \\
+	Lorsque le noyau du jeu est lancé, celui-ci crée le plateau : il instancie la classe board qui est le cœur du jeu. La classe board, lorsqu’elle est instanciée, crée et attribue les personnages et les rôles de manière aléatoire. Elle crée aussi le tableau de dés, utiles pour simplifier les interactions. Les instances de Player ont toutes accès au board (leur créateur) afin d’utiliser certaines méthodes.  \\
+Une fois que tout cela est fait, les personnages et rôles attribués à chaque joueur sont révélés à ces derniers en créant un dictionnaire via la méthode reveal() de board et en l’affichant depuis le main. La boucle du jeu fonctionne comme suit : on demande à l’utilisateur quels dés il souhaite relancer (tous les dés sont automatiquement sélectionnés si c’est le premier lancer) et on lance la méthode playerAction de board qui s’occupe des effets immédiats tels que les flèches ou la dynamite. Les dés étant des dynamites sont bloqués et ne sont donc pas relancés même s’ils sont sélectionnés. Lors du passage au joueur suivant ils sont alors débloqués. Tant que le joueur qui joue a le droit de relancer les dés, ces opérations sont répétées. Si le joueur souhaite finir son tour, son nombre de lancers restants passe à 0 puis on effectue l’application des effets et on passe au joueur suivant. Si il meurt pendant son tour ou si il reçoit 3 dynamites, les effets ne sont pas appliqués (l’attribut de board silenced passe à 1 pour dire que les effets ne sont pas pris en compte). Cette dernière fonctionnalité a ensuite été changée dans la version en ligne du noyau car elle était dûe à une erreur dans la compréhension des règles. \\
 
 \newpage
 
@@ -290,7 +288,7 @@ Vous pouvez voir sur \textbf{la figure 1} les différentes catégories ainsi que
 
 \begin{itemize}
 	\item pseudo : le nom qui le désignera durant ses futures parties.
-	\item mot de passe : son code personnel de sécurité qui doit au moins comporter 6 lettres.
+	\item mot de passe : son code personnel de sécurité qui doit au moins comporter 6 caracters.
 	\item confirmation du mot de passe : un code afin de vérifier que son mot de passe est bien celui escompté.
 	\item mail : son adresse mail qui servira d’identifiant à la base de données. 	 \\
 \end{itemize}
@@ -366,7 +364,7 @@ Vous pouvez voir sur \textbf{la figure 1} les différentes catégories ainsi que
 	
 	\item \textbf{Évolution} \\
 	
-	Nous avions défini, sur papier, une architecture finale à atteindre. Étant donné que nous n’avions pas assez de compétences dans le domaine, il a été développé par tâtonnement.  Ainsi, nous somme arrivés à sa version finale en plusieurs étapes. \\
+	Nous avions défini, sur papier, une architecture finale à atteindre. Étant donné que nous n’avions pas assez de compétences dans le domaine, il a été développé par tâtonnement. Ainsi, nous somme arrivés à sa version finale en plusieurs étapes. \\
 	
     Dans un premier temps, nous n’avions qu’un serveur qui pouvait accueillir 8 joueurs maximum et lancer une partie mais sans pouvoir répondre aux requêtes des clients. Après divers tests sur la réception des paquets et la mise en place du protocole de communication, nous avons implémenté la gestion des paquets envoyés par les clients. \\
 
@@ -393,7 +391,7 @@ Cette architecture se base sur 4 caractéristiques:  \\
 	Pour avoir une expérience utilisateur agréable et éviter qu’une partie soit bloquée à cause d’une déconnexion en cours de partie, nous avons décidé que toutes les déconnexions imprévues, entraînent la mort en jeu du déconnecté. Nous aurions pu choisir de laisser un délai à l’utilisateur pour se reconnecter. Malheureusement cela aurait été difficile car l’utilisation de trop nombreux signaux provoque une instabilité du serveur. Nous avons donc privilégié une implémentation moins riche mais stable.\\
 
 	\item \textit{Gestion de la partie :} \\\\
-	La gestion de la partie se fait en fonction des messages reçus. Le serveur, à la réception de chaque paquet, doit dans un premier temps identifier à quel lobby est associé le client qui lui a envoyé ce paquet. Ensuite, en fonction du message (voir messages), il effectue une action sur le jeu. Mise à part certains cas particuliers dûs aux effets spéciaux des personnages, il envoie en broadCast les nouvelles informations relatives à la partie.\\
+	La gestion de la partie se fait en fonction des messages reçus. Le serveur, à la réception de chaque paquet, doit dans un premier temps identifier à quel lobby est associé le client qui lui a envoyé ce paquet. Ensuite, en fonction du message (voir "messages"), il effectue une action sur le jeu. Mise à part certains cas particuliers dûs aux effets spéciaux des personnages, il envoie en broadCast les nouvelles informations relatives à la partie.\\
 
 \newpage
 
