@@ -329,7 +329,7 @@ Le développement de l'architecture réseau a été pensée pour être la plus s
 
 Il s’agit d’une architecture basique serveur/client. Les clients communiquent avec un serveur hébergé sur google cloud et celui-ci transmet l’information au noyau pour effectuer la requête du client. \\
 
-Ensuite il envoie des paquets à tous les clients en jeu. Ainsi, le plus important était de déterminer un protocole de communication. Pour cela nous avons décomposé les différentes phases de jeux (connexions/début de partie, distribution des rôles, La partie, Fin de partie). En partant de ce postulat, nous avons imaginé les messages qui pouvaient s’échanger.
+Ensuite il envoie des paquets à tous les clients en jeu. Ainsi, le plus important était de déterminer un protocole de communication. Pour cela nous avons décomposé les différentes phases de jeux (la connexions/début de partie, la distribution des rôles, La partie, la fin de partie). En partant de ce postulat, nous avons imaginé les messages qui pouvaient s’échanger.
 
 \newpage
 
@@ -339,7 +339,7 @@ Ensuite il envoie des paquets à tous les clients en jeu. Ainsi, le plus importa
 Ayant établi la structure du réseau, il fallait adapter l'IHM en lui ajoutant des moyens de capter chaque message que le réseau devait lui envoyer. \\
 
 Comme le réseau envoyait les informations telles que, la vie des joueurs, le nombre de flèches utilisées, les joueurs morts et leurs pseudonymes, il fallait que l’IHM reçoit et analyse ces informations afin d’adapter son affichage tout en prenant en compte le joueur actuel et ceux qui ne jouent pas.
-L’IHM est également chargée d’envoyer des message afin de faire part au réseau, des choix effectués par le joueur. Cela peut être durant un lancé de dés, l’activation de l'effet d’un dé, ou encore lorsque le joueur a terminé son tour. \\
+L’IHM est également chargée d’envoyer des messages afin de faire part au réseau des choix effectués par le joueur. Cela peut être durant un lancé de dés, l’activation de l'effet d’un dé, ou encore lorsque le joueur a terminé son tour. \\
 
 Ces messages permettent donc d’informer le réseau mais ils servent aussi à informer les autres clients de ces changements. Le réseau va les notifier de ces changements et envoyer les nouvelles données du jeu, telles que le nombre de flèches restantes sur le plateau, le nombre de points de vie de chaque joueur, les flèches qu’ils possèdent, ainsi que le nombre de lancer restant au joueur à chaque tour. \\
 
@@ -357,18 +357,18 @@ Quand un joueur A ne joue pas, il obtient des messages du réseau, tels que la m
 	
 	Le serveur est l’élément du jeu qui a été commencé le plus tardivement. Nos connaissances rudimentaires de l’utilisation de Godot et de l’architecture réseau, nous ont amenés à créer un plan de conception inadapté dans le cadre de notre projet. Nous avons donc mal défini les besoins auxquels nous devions répondre dans l’implémentation du réseau. Nous savions cependant que l’on souhaitait pouvoir l'implémenter en GDscript pour faciliter l’exportation du client par la suite. \\
 	
-Le jeu que nous souhaitions développer était un jeu de plateau au tour par tour. Les règles de celui-ci se devait d'être centralisées pour éviter les tricheries. Avec ces données en tête nous avons décidé de développer un serveur séquentiel et pouvant gérer plusieurs salon de jeu(parties).  \\
+Le jeu que nous souhaitions développer était un jeu de plateau au tour par tour. Les règles de celui-ci se devait d'être centralisées pour éviter les tricheries. Avec ces données en tête nous avons décidé de développer un serveur séquentiel et pouvant gérer plusieurs salon de jeu (parties).  \\
 
-Le serveur a été fait de façon séquentielle pour faciliter son développement. L’implémentation d’un serveur fonctionnant de façon parallèle aurait été plus complexe à implémenter et aurait demandé des délais supplémentaires. Bang! étant un jeu de type “tour par tour”, cette implémentation, bien que optimale, n’est pas nécessaire au vu des  lourdes ressources qu’elle demanderait. \\
+Le serveur a été fait de façon séquentielle afin de faciliter son développement. L’implémentation d’un serveur fonctionnant de façon parallèle aurait été plus complexe à implémenter et aurait demandé des délais supplémentaires. Bang! étant un jeu de type “tour par tour”, cette implémentation, bien que optimale, n’est pas nécessaire au vu des lourdes ressources qu’elle demanderait. \\
 
 	
 	\item \textbf{Évolution} \\
 	
-	Nous avions défini, sur papier, une architecture finale à atteindre. Étant donné que nous n’avions pas assez de compétences dans le domaine, il a été développé par tâtonnement.  Ainsi, nous somme arrivés à sa version finale en plusieurs étapes. \\
+	Nous avions défini, sur papier, une architecture finale à atteindre. Étant donné que nous n’avions pas assez de compétences dans le domaine, il a été développé par tâtonnement. Ainsi, nous somme arrivés à sa version finale en plusieurs étapes. \\
 	
 Dans un premier temps nous n’avions qu’un serveur qui pouvait accueillir 8 joueurs maximum et lancer une partie mais sans pouvoir répondre aux requêtes des clients. Après divers tests sur la réception des paquets et la mise en place du protocole de communication, nous avons implémenté la gestion des paquets envoyés par les clients. \\
 
-Enfin nous avons réalisé l'implémentation des déconnexions imprévues. Cette étape fut complexe et nous avons dû surpasser beaucoup d’obstacles dans sa conception.   Il était en effet, très nuisible à l'expérience utilisateur, de se retrouver bloqué au cours d’une partie. Ainsi, nous avions une version du serveur plus stable et plus robuste.\\
+Enfin nous avons réalisé l'implémentation des déconnexions imprévues. Cette étape fut complexe et nous avons dû surpasser beaucoup d’obstacles dans sa conception. Il était en effet, très nuisible à l'expérience utilisateur, de se retrouver bloqué au cours d’une partie. Ainsi, nous avions une version du serveur plus stable et plus robuste.\\
 
 Cependant cette version ne pouvait accueillir qu’une seule partie. Quand celle-ci était lancé, tout nouveau joueur se voyait déconnecté du jeu. Or notre objectif était d’avoir une version du serveur capable de supporter plusieurs parties en simultané. Dans cette optique, le serveur et le noyau (par l’ajout de la classe lobby) ont été retravaillés. \\
 
@@ -391,7 +391,7 @@ Cette architecture se base sur 4 caractéristiques:  \\
 	Pour avoir une expérience utilisateur agréable et éviter qu’une partie soit bloquée à cause d’une déconnexion en cours de partie, nous avons décidé que toutes les déconnexions imprévues, entraînent la mort en jeu du déconnecté. Nous aurions pu choisir de laisser un délai à l’utilisateur pour se reconnecter. Malheureusement cela aurait été difficile car l’utilisation de trop nombreux signaux provoque une instabilité du serveur. Nous avons donc privilégié une implémentation moins riche mais stable.\\
 
 	\item \textit{Gestion de la partie :} \\\\
-	La gestion de la partie se fait en fonction des messages reçus. Le serveur, à la réception de chaque paquet, doit dans un premier temps identifier à quel lobby est associé le client qui lui a envoyé ce paquet. Ensuite, en fonction du message (voir messages), il effectue une action sur le jeu. Mise à part certains cas particuliers dûs aux effets spéciaux des personnages, il envoie en broadCast les nouvelles informations relatives à la partie.\\
+	La gestion de la partie se fait en fonction des messages reçus. Le serveur, à la réception de chaque paquet, doit dans un premier temps identifier à quel lobby est associé le client qui lui a envoyé ce paquet. Ensuite, en fonction du message (voir "messages"), il effectue une action sur le jeu. Mise à part certains cas particuliers dûs aux effets spéciaux des personnages, il envoie en broadCast les nouvelles informations relatives à la partie.\\
 
 \newpage
 
