@@ -1,0 +1,389 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://sources/menu/Settings.gd" type="Script" id=1]
+[ext_resource path="res://imgs/menu_decli_v1/menu_base.jpg" type="Texture" id=2]
+[ext_resource path="res://sources/menu/HSlider.gd" type="Script" id=3]
+[ext_resource path="res://imgs/backgroundSetting.jpg" type="Texture" id=4]
+[ext_resource path="res://imgs/ArrowIconback.png" type="Texture" id=5]
+[ext_resource path="res://font/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://sources/menu/Languagedropdownmenu.gd" type="Script" id=7]
+[ext_resource path="res://sources/menu/FullScreenDropDownMenu.gd" type="Script" id=8]
+[ext_resource path="res://sources/menu/OptionButton.gd" type="Script" id=9]
+[ext_resource path="res://music/Menu Setting - The Old Train.ogg" type="AudioStream" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.203922 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.203922 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.203922 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0235294, 0.0196078, 0.0196078, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=4]
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxLine" id=5]
+color = Color( 0.239216, 0.188235, 0.188235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.658824, 0.0705882, 0.0705882, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.513726, 0.635294, 0.172549, 0.698039 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.054902, 0.054902, 0.054902, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.643137, 0.717647, 0.133333, 0.203922 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.643137, 0.717647, 0.133333, 0.203922 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=12]
+size = 14
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=13]
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.513726, 0.635294, 0.172549, 0.698039 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.643137, 0.717647, 0.133333, 0.203922 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0352941, 0.0313726, 0.0313726, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.643137, 0.717647, 0.133333, 0.203922 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0509804, 0.0470588, 0.0470588, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=18]
+size = 14
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=19]
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.513726, 0.635294, 0.172549, 0.698039 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0627451, 0.0588235, 0.0588235, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.643137, 0.717647, 0.133333, 0.203922 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0235294, 0.0196078, 0.0196078, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.643137, 0.717647, 0.133333, 0.203922 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.027451, 0.027451, 0.027451, 1 )
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=24]
+size = 14
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1280.0
+margin_bottom = 726.0
+rect_rotation = 0.0354422
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.498039 )
+margin_left = 202.0
+margin_top = 105.0
+margin_right = 1146.0
+margin_bottom = 644.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="TextureRect" parent="."]
+visible = false
+margin_right = 1920.0
+margin_bottom = 1056.0
+rect_scale = Vector2( 0.67, 0.68 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_back" type="Button" parent="."]
+margin_left = 27.0
+margin_top = 20.0
+margin_right = 96.0
+margin_bottom = 82.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 5 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 253.55
+margin_top = 26.5091
+margin_right = 587.55
+margin_bottom = 78.5087
+
+[node name="label_Volume" type="Label" parent="."]
+visible = false
+margin_left = 552.0
+margin_top = 150.0
+margin_right = 673.0
+margin_bottom = 173.0
+custom_fonts/font = SubResource( 4 )
+text = "Music Volume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="."]
+visible = false
+margin_left = 490.0
+margin_top = 183.0
+margin_right = 818.0
+margin_bottom = 210.0
+size_flags_horizontal = 3
+custom_styles/slider = SubResource( 5 )
+custom_styles/grabber_area = SubResource( 6 )
+min_value = -70.0
+value = 15.0
+ticks_on_borders = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menuMusic" type="AudioStreamPlayer2D" parent="HSlider"]
+visible = false
+position = Vector2( -490, -183 )
+stream = ExtResource( 10 )
+
+[node name="LabelDisplayMode" type="Label" parent="."]
+margin_left = 552.0
+margin_top = 210.0
+margin_right = 673.0
+margin_bottom = 231.0
+custom_fonts/font = SubResource( 7 )
+text = "Display Mode"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullScreenDropDownMenu" type="OptionButton" parent="."]
+margin_left = 490.0
+margin_top = 242.0
+margin_right = 809.0
+margin_bottom = 273.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
+text = " Windowed"
+align = 1
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LanguageLabel" type="Label" parent="."]
+margin_left = 552.0
+margin_top = 304.0
+margin_right = 643.0
+margin_bottom = 333.0
+custom_fonts/font = SubResource( 13 )
+text = "Language"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Languagedropdownmenu" type="OptionButton" parent="."]
+margin_left = 488.708
+margin_top = 337.0
+margin_right = 807.708
+margin_bottom = 368.0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+custom_fonts/font = SubResource( 18 )
+text = " English"
+align = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resolution" type="Label" parent="."]
+margin_left = 552.0
+margin_top = 399.0
+margin_right = 644.0
+margin_bottom = 422.0
+custom_fonts/font = SubResource( 19 )
+text = "Résolution"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResolutionDropDown" type="OptionButton" parent="."]
+margin_left = 490.0
+margin_top = 439.0
+margin_right = 809.0
+margin_bottom = 470.0
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 21 )
+custom_styles/focus = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+custom_fonts/font = SubResource( 24 )
+text = "1920 x 1080"
+align = 1
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="button_back" to="." method="_on_button_back_pressed"]
+[connection signal="value_changed" from="HSlider" to="HSlider" method="_on_HSlider_value_changed"]
+[connection signal="item_selected" from="FullScreenDropDownMenu" to="FullScreenDropDownMenu" method="_on_FullScreenDropDownMenu_item_selected"]
+[connection signal="item_selected" from="Languagedropdownmenu" to="." method="_on_Languagedropdownmenu_item_selected"]
+[connection signal="item_selected" from="ResolutionDropDown" to="ResolutionDropDown" method="_on_OptionButton_item_selected"]

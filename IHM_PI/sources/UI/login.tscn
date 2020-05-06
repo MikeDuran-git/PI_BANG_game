@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sources/UI/loginScene.gd" type="Script" id=1]
+[ext_resource path="res://font/MontSerrat_36.tres" type="DynamicFont" id=2]
+
+[node name="LoginScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Overlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoginForm" type="GridContainer" parent="Overlay"]
+margin_left = 350.0
+margin_top = 100.0
+margin_right = 932.0
+margin_bottom = 320.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 10
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameLabel" type="Label" parent="Overlay/LoginForm"]
+margin_top = 5.0
+margin_right = 150.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 150, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "Username :"
+align = 2
+
+[node name="UsernameInput" type="LineEdit" parent="Overlay/LoginForm"]
+margin_left = 160.0
+margin_right = 582.0
+margin_bottom = 12.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+
+[node name="PasswordLabel" type="Label" parent="Overlay/LoginForm"]
+margin_top = 37.0
+margin_right = 150.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 150, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "Password :"
+align = 2
+
+[node name="PasswordInput" type="LineEdit" parent="Overlay/LoginForm"]
+margin_left = 160.0
+margin_top = 32.0
+margin_right = 582.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+secret = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Overlay"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 350.882
+margin_top = -30.0957
+margin_right = 930.882
+margin_bottom = 24.9043
+custom_constants/separation = 130
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SignUpButton" type="Button" parent="Overlay/HBoxContainer"]
+margin_right = 225.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Sign up"
+
+[node name="SignInButton" type="Button" parent="Overlay/HBoxContainer"]
+margin_left = 355.0
+margin_right = 580.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Sign in"
+[connection signal="pressed" from="Overlay/HBoxContainer/SignUpButton" to="." method="_on_SignUpButton_pressed"]

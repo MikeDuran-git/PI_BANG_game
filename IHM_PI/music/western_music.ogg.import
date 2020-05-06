@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/western_music.ogg-d24a9dc6f85925cf625a07277f54c882.oggstr"
+
+[deps]
+
+source_file="res://music/western_music.ogg"
+dest_files=[ "res://.import/western_music.ogg-d24a9dc6f85925cf625a07277f54c882.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
