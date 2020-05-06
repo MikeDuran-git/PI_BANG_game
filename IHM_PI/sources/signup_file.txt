@@ -1,0 +1,36 @@
+﻿{"login":"vavavvav","password":"davvvazvav"}
+{"login":"papa","password":"a"}
+{"login":"a","password":"a"}
+{"login":"aa","password":"a"}
+{"login":"aaaazrza","password":"a"}
+{"login":"aaaaa","password":"a"}
+{"login":"aaeaze","password":"a"}
+{"login":"azdzf","password":"a"}
+{"login":"aaaa","password":"a"}
+{"login":"eretgfe","password":"a"}
+{"login":"aferf","password":"a"}
+{"login":"ezrfeztez","password":"a"}
+{"login":"aertfet","password":"a"}
+{"login":"aaa","password":"a"}
+{"login":"tretretrge","password":"a"}
+{"login":"zdfzf","password":"a"}
+{"login":"rre","password":"a"}
+{"login":"ererer","password":"a"}
+{"login":"afegr'","password":"a"}
+{"login":"ezfrnjeg","password":"a"}
+{"login":"argrgr","password":"a"}
+{"login":"egfregf","password":"a"}
+{"login":"efregfr","password":"a"}
+{"login":"arfvr","password":"a"}
+{"login":"afefef","password":"a"}
+<<<<<<< HEAD
+<<<<<<< HEAD
+{"login":"vava","password":"vava"}
+{"login":"vavav","password":"vavav"}
+=======
+{"login":"m","password":"s"}
+>>>>>>> 563e3564ff15c8a67693e36689f5bdb1ccebb980
+{"login":"vavavav","password":"vavavav"}
+{"login":"vavvav","password":"vavvav"}
+=======
+>>>>>>> parent of eccf29d... ajout bouton quitter, modif bouton plein écran (options), début implémentation test de validation d'email

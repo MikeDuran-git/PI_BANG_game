@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Menu Setting - The Old Train.ogg-2bf9462c913ffcec2948106e26429130.oggstr"
+
+[deps]
+
+source_file="res://music/Menu Setting - The Old Train.ogg"
+dest_files=[ "res://.import/Menu Setting - The Old Train.ogg-2bf9462c913ffcec2948106e26429130.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
