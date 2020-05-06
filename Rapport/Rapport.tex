@@ -267,7 +267,6 @@ Une fois que tout cela est fait, les personnages et rôles attribués à chaque 
 	La version finale du noyau a été pensée pour correspondre à un ensemble d’objets qui en les associants permettent de symboliser une partie. Ainsi il correspond plus à une sorte de framework qui est utilisé par le serveur pour répondre aux requêtes des joueurs. Il est composé d’une représentation (classe) des dés, d'une des joueurs, d'une du plateau et enfin d'une correspondant à un lobby (salon de jeu). 
     La classe des dés et des joueurs n’a pas eu besoin de réel changement d'implémentation et la même idée que dans la première version a été retenue. Cependant celle représentant le plateau a dû être repensée entièrement. En effet plusieurs méthodes ont dû être décomposées en plus petites. Ainsi chaque action qui peut se faire sur un plateau de jeu a été implémenté sous forme de méthode.
 	
-\newpage
 
 	 De cette façon on pouvait prendre le contrôle sur le jeu via un intermédiaire extérieure (Le serveur). Ainsi, pour effectuer une application d'effet spécifique (choisie par un joueur), nous pouvons l’effectuer directement grâce au serveur. \\
 	
