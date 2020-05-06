@@ -245,7 +245,7 @@ Le noyau tel qu’il est décrit ici correspond à la version hors-ligne du noya
 
 \begin{enumerate}
 	\item \textbf{La boucle principale} \\\\
-	Lorsque le noyau du jeu est lancé, celui-ci crée le plateau : il instancie la classe board qui est le cœur du jeu. La classe board, lorsqu’elle est instanciée, crée les personnages de manière aléatoire et attribue les rôles, aussi de manière aléatoire. Elle crée aussi le tableau de dés, utiles pour simplifier les interactions. Les instances de Player ont toutes accès au board (leur créateur) afin d’utiliser certaines méthodes.  \\
+	Lorsque le noyau du jeu est lancé, celui-ci crée le plateau : il instancie la classe board qui est le cœur du jeu. La classe board, lorsqu’elle est instanciée, crée et attribue les personnages et les rôles de manière aléatoire. Elle crée aussi le tableau de dés, utiles pour simplifier les interactions. Les instances de Player ont toutes accès au board (leur créateur) afin d’utiliser certaines méthodes.  \\
 Une fois que tout cela est fait, les personnages et rôles attribués à chaque joueur sont révélés à ces derniers en créant un dictionnaire via la méthode reveal() de board et en l’affichant depuis le main. La boucle du jeu fonctionne comme suit : on demande à l’utilisateur quels dés il souhaite relancer (tous les dés sont automatiquement sélectionnés si c’est le premier lancer) et on lance la méthode playerAction de board qui s’occupe des effets immédiats tels que les flèches ou la dynamite. Les dés étant des dynamites sont bloqués et ne sont donc pas relancés même s’ils sont sélectionnés. Lors du passage au joueur suivant ils sont alors débloqués. Tant que le joueur qui joue a le droit de relancer les dés, ces opérations sont répétées. Si le joueur souhaite finir son tour, son nombre de lancers restants passe à 0 puis on effectue l’application des effets et on passe au joueur suivant. Si il meurt pendant son tour ou si il reçoit 3 dynamites, les effets ne sont pas appliqués (l’attribut de board silenced passe à 1 pour dire que les effets ne sont pas pris en compte). Cette dernière fonctionnalité a ensuite été changée dans la version en ligne du noyau car elle était dûe à une erreur dans la compréhension des règles. \\
 
 \newpage
@@ -288,7 +288,7 @@ Dans le cas où le client n’est pas encore inscrit, il recevra une erreur, lui
 
 \begin{itemize}
 	\item pseudo : le nom qui le désignera durant ses futures parties.
-	\item mot de passe : son code personnel de sécurité qui doit au moins comporter 6 lettres.
+	\item mot de passe : son code personnel de sécurité qui doit au moins comporter 6 caracters.
 	\item confirmation du mot de passe : un code afin de vérifier que son mot de passe est bien celui escompté.
 	\item mail : son adresse mail qui servira d’identifiant à la base de données. 	 \\
 \end{itemize}
