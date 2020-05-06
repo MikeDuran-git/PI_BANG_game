@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sources/game/Player.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://imgs/fleche.png" type="Texture" id=3]
+[ext_resource path="res://imgs/Biere.png" type="Texture" id=4]
+[ext_resource path="res://sources/game/RollDices.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="player" type="Sprite" parent="."]
+position = Vector2( 571.97, 264.361 )
+scale = Vector2( 2.46392, 2.29651 )
+texture = ExtResource( 2 )
+
+[node name="arrow1" type="Sprite" parent="player"]
+position = Vector2( 51.0933, -25.1487 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
+
+[node name="arrow2" type="Sprite" parent="player"]
+position = Vector2( 50.3364, -5.68762 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
+
+[node name="arrow3" type="Sprite" parent="player"]
+position = Vector2( 49.9209, 12.6687 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
+
+[node name="life1" type="Sprite" parent="player"]
+position = Vector2( -23.6489, -46.3026 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 4 )
+
+[node name="life2" type="Sprite" parent="player"]
+position = Vector2( -0.770996, -46.0677 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 4 )
+
+[node name="life3" type="Sprite" parent="player"]
+visible = false
+position = Vector2( 22.5039, -47.4277 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 4 )
+
+[node name="labellife" type="Label" parent="player"]
+margin_left = -20.7647
+margin_top = 38.4
+margin_right = 52.2353
+margin_bottom = 57.4
+text = "Life = X"
+
+[node name="labelarrow" type="Label" parent="player"]
+margin_left = -26.0
+margin_top = 56.0
+margin_right = 55.0
+margin_bottom = 70.0
+text = "Arrows = 0"
+
+[node name="RollDice" parent="." instance=ExtResource( 5 )]
+position = Vector2( 176.875, 198 )
+[connection signal="script_changed" from="RollDice" to="." method="_on_RollDice_script_changed"]

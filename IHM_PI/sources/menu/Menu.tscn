@@ -1,0 +1,746 @@
+[gd_scene load_steps=66 format=2]
+
+[ext_resource path="res://sources/menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://imgs/menu_base.jpg" type="Texture" id=2]
+[ext_resource path="res://imgs/ArrowIconback.png" type="Texture" id=3]
+[ext_resource path="res://imgs/logo_bang.png" type="Texture" id=4]
+[ext_resource path="res://sources/menu/lineedit_login.gd" type="Script" id=5]
+[ext_resource path="res://font/Carnevalee Freakshow.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://imgs/ArrowIcon.png" type="Texture" id=7]
+[ext_resource path="res://music/pan.wav" type="AudioStream" id=8]
+[ext_resource path="res://sources/menu/lineedit_pwd.gd" type="Script" id=9]
+[ext_resource path="res://sources/menu/signup_login.gd" type="Script" id=10]
+[ext_resource path="res://font/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://sources/menu/signup_pwd.gd" type="Script" id=13]
+[ext_resource path="res://sources/menu/signup_email.gd" type="Script" id=14]
+[ext_resource path="res://sources/menu/signup_pwd2.gd" type="Script" id=15]
+[ext_resource path="res://imgs/img_500547.png" type="Texture" id=16]
+[ext_resource path="res://sources/menu/PopupWindowValidation.gd" type="Script" id=17]
+[ext_resource path="res://sources/menu/HSlider.gd" type="Script" id=18]
+[ext_resource path="res://music/Menu Setting - The Old Train.ogg" type="AudioStream" id=19]
+[ext_resource path="res://imgs/music.png" type="Texture" id=20]
+
+[sub_resource type="Animation" id=1]
+resource_name = "LogoAnim"
+tracks/0/type = "value"
+tracks/0/path = NodePath("logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 130, -1 ), Vector2( 220, 170 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "SignupAnimation"
+tracks/0/type = "value"
+tracks/0/path = NodePath("signup_login:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 120 ), Vector2( 430, 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("signup_pwd:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 220 ), Vector2( 430, 220 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("signup_pwd2:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 317.247 ), Vector2( 430, 320 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("signup_email:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 420 ), Vector2( 430, 420 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("button_validate_signup:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 520 ), Vector2( 763, 520 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("button_goback_login:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 51 ), Vector2( 763, 51 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.968627, 0.945098, 0.937255, 0 )
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0 )
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 14
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.647059, 0.160784, 0.160784, 0.968627 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.647059, 0.160784, 0.160784, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.670588 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.172549 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0745098, 0.054902, 0.054902, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=16]
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.57, 0.47, 0.44, 0.17 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0705882, 0.0509804, 0.0509804, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=19]
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.00784314, 0.00784314, 0.00784314, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=25]
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=29]
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=31]
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0.647059, 0.160784, 0.160784, 0.968627 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.027451, 0.0235294, 0.0235294, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=36]
+size = 28
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0.647059, 0.160784, 0.160784, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id=39]
+
+[sub_resource type="StyleBoxFlat" id=40]
+bg_color = Color( 0.572549, 0.47451, 0.443137, 0.509804 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0627451, 0.054902, 0.054902, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=41]
+size = 20
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=42]
+size = 37
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=43]
+size = 14
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="Theme" id=44]
+default_font = SubResource( 43 )
+
+[sub_resource type="StyleBoxLine" id=45]
+color = Color( 0.239216, 0.188235, 0.188235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=46]
+bg_color = Color( 0.933333, 0, 0, 1 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.598755
+margin_right = 1280.0
+margin_bottom = 730.599
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="Sprite" parent="."]
+position = Vector2( 130, -1 )
+scale = Vector2( 1.04865, 0.528149 )
+texture = ExtResource( 4 )
+
+[node name="LogoAnimation" type="AnimationPlayer" parent="."]
+autoplay = "LogoAnim"
+anims/LogoAnim = SubResource( 1 )
+
+[node name="SignupAnimation" type="AnimationPlayer" parent="."]
+autoplay = "SignupAnimation"
+anims/SignupAnimation = SubResource( 2 )
+
+[node name="button_settings" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 1105.53
+margin_top = 19.6569
+margin_right = 1246.53
+margin_bottom = 114.657
+hint_tooltip = "Settings"
+text = "OPTIONS"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_settings" type="Sprite" parent="button_settings"]
+modulate = Color( 0.713726, 0.262745, 0.262745, 1 )
+self_modulate = Color( 0.329412, 0.254902, 0.309804, 1 )
+show_behind_parent = true
+position = Vector2( 73.8511, 52.9736 )
+rotation = 0.541052
+scale = Vector2( 0.128078, 0.116774 )
+texture = ExtResource( 16 )
+
+[node name="signup" type="RichTextLabel" parent="."]
+margin_left = 66.6711
+margin_top = 487.834
+margin_right = 355.671
+margin_bottom = 534.834
+custom_fonts/bold_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0.611765, 0.611765, 0.611765, 0.627451 )
+bbcode_enabled = true
+bbcode_text = "      Don't have an account?  
+                   [u] Sign up [/u]"
+text = "      Don't have an account?  
+                    Sign up "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_to_signup" type="Button" parent="."]
+margin_left = 163.146
+margin_top = 506.048
+margin_right = 236.146
+margin_bottom = 532.048
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.8, 0.639216, 0.639216, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_play_game" type="Button" parent="."]
+margin_left = 173.0
+margin_top = 412.0
+margin_right = 234.0
+margin_bottom = 466.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+icon = ExtResource( 7 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="button_play_game"]
+
+[node name="HTTPRequest3" type="HTTPRequest" parent="button_play_game"]
+
+[node name="lineedit_login" type="LineEdit" parent="."]
+margin_left = 65.0
+margin_top = 254.0
+margin_right = 354.0
+margin_bottom = 306.0
+custom_styles/focus = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+custom_fonts/font = SubResource( 16 )
+custom_colors/font_color = Color( 0.807843, 0.643137, 0.643137, 1 )
+placeholder_text = "  Email"
+caret_blink = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lineedit_pwd" type="LineEdit" parent="."]
+margin_left = 65.0
+margin_top = 331.0
+margin_right = 354.0
+margin_bottom = 383.0
+custom_styles/focus = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 0.8, 0.639216, 0.639216, 1 )
+secret = true
+placeholder_text = "   Password"
+caret_blink = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound_pan" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+volume_db = 0.1
+
+[node name="signup_login" type="LineEdit" parent="."]
+visible = false
+margin_left = -500.0
+margin_top = 120.0
+margin_right = -78.0
+margin_bottom = 180.0
+custom_styles/focus = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
+placeholder_text = "  Login"
+caret_blink = true
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="signup_pwd" type="LineEdit" parent="."]
+visible = false
+margin_left = -500.0
+margin_top = 220.0
+margin_right = -78.0
+margin_bottom = 280.0
+custom_styles/focus = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 25 )
+secret = true
+placeholder_text = "  Password"
+caret_blink = true
+script = ExtResource( 13 )
+
+[node name="signup_pwd2" type="LineEdit" parent="."]
+visible = false
+margin_left = -500.0
+margin_top = 317.247
+margin_right = -78.0
+margin_bottom = 377.247
+custom_styles/focus = SubResource( 26 )
+custom_styles/normal = SubResource( 27 )
+custom_fonts/font = SubResource( 28 )
+secret = true
+placeholder_text = "  Confirm Password"
+caret_blink = true
+script = ExtResource( 15 )
+
+[node name="signup_email" type="LineEdit" parent="."]
+visible = false
+margin_left = -500.0
+margin_top = 420.0
+margin_right = -78.0
+margin_bottom = 480.0
+custom_styles/focus = SubResource( 29 )
+custom_styles/normal = SubResource( 30 )
+custom_fonts/font = SubResource( 31 )
+custom_colors/font_color = Color( 0.92549, 0.854902, 0.854902, 1 )
+placeholder_text = "  Email"
+caret_blink = true
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_validate_signup" type="Button" parent="."]
+visible = false
+margin_left = -500.0
+margin_top = 520.0
+margin_right = -432.0
+margin_bottom = 566.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 33 )
+custom_styles/focus = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+custom_fonts/font = SubResource( 36 )
+icon = ExtResource( 7 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="button_validate_signup"]
+
+[node name="button_goback_login" type="Button" parent="."]
+visible = false
+margin_left = -500.0
+margin_top = 51.0
+margin_right = -432.0
+margin_bottom = 97.0
+custom_styles/hover = SubResource( 37 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 39 )
+custom_styles/normal = SubResource( 40 )
+custom_fonts/font = SubResource( 41 )
+icon = ExtResource( 3 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = 74.8206
+margin_top = 274.796
+margin_right = 289.821
+margin_bottom = 357.796
+custom_fonts/font = SubResource( 42 )
+text = "test joueur"
+
+[node name="error_signup_label" type="Label" parent="."]
+margin_left = 66.0
+margin_top = 227.0
+margin_right = 349.0
+margin_bottom = 252.0
+custom_colors/font_color = Color( 0.917647, 0.321569, 0.321569, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupWindowValidation" type="AcceptDialog" parent="."]
+margin_left = 449.401
+margin_top = 320.599
+margin_right = 778.401
+margin_bottom = 386.599
+theme = SubResource( 44 )
+window_title = "Account Confirmation"
+resizable = true
+dialog_text = "Your account's been successfully created!"
+script = ExtResource( 17 )
+
+[node name="gameLaunchStateWindow" type="ColorRect" parent="."]
+visible = false
+margin_left = 421.0
+margin_top = 257.0
+margin_right = 713.0
+margin_bottom = 382.0
+color = Color( 0, 0, 0, 0.215686 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="currentNbPlayerLabel" type="Label" parent="gameLaunchStateWindow"]
+margin_left = 0.950012
+margin_top = 32.3
+margin_right = 290.95
+margin_bottom = 92.3
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Nombre de joueurs actuel : 1"
+align = 1
+valign = 1
+
+[node name="musicIcon" type="TextureRect" parent="."]
+margin_left = 1140.0
+margin_top = 641.0
+margin_right = 1171.0
+margin_bottom = 675.0
+texture = ExtResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SliderMenu" type="HSlider" parent="."]
+margin_left = 1157.0
+margin_top = 648.0
+margin_right = 1250.0
+margin_bottom = 677.0
+custom_styles/slider = SubResource( 45 )
+custom_styles/grabber_area = SubResource( 46 )
+min_value = -70.0
+value = 15.0
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menuMusic" type="AudioStreamPlayer2D" parent="SliderMenu"]
+position = Vector2( -1073.96, -654.899 )
+stream = ExtResource( 19 )
+autoplay = true
+[connection signal="pressed" from="button_settings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="button_to_signup" to="." method="_on_button_to_signup_pressed"]
+[connection signal="pressed" from="button_play_game" to="." method="_on_button_play_game_pressed"]
+[connection signal="request_completed" from="button_play_game/HTTPRequest2" to="." method="_on_HTTPRequest2_request_completed"]
+[connection signal="request_completed" from="button_play_game/HTTPRequest3" to="." method="_on_HTTPRequest3_request_completed"]
+[connection signal="focus_entered" from="lineedit_login" to="lineedit_login" method="_on_lineedit_login_focus_entered"]
+[connection signal="focus_exited" from="lineedit_login" to="lineedit_login" method="_on_lineedit_login_focus_exited"]
+[connection signal="mouse_entered" from="lineedit_login" to="lineedit_login" method="_on_lineedit_login_mouse_entered"]
+[connection signal="mouse_exited" from="lineedit_login" to="lineedit_login" method="_on_lineedit_login_mouse_exited"]
+[connection signal="text_changed" from="lineedit_login" to="." method="_on_lineedit_login_text_changed"]
+[connection signal="focus_entered" from="lineedit_pwd" to="lineedit_pwd" method="_on_lineedit_pwd_focus_entered"]
+[connection signal="focus_exited" from="lineedit_pwd" to="lineedit_pwd" method="_on_lineedit_pwd_focus_exited"]
+[connection signal="mouse_entered" from="lineedit_pwd" to="lineedit_pwd" method="_on_lineedit_pwd_mouse_entered"]
+[connection signal="mouse_exited" from="lineedit_pwd" to="lineedit_pwd" method="_on_lineedit_pwd_mouse_exited"]
+[connection signal="text_changed" from="lineedit_pwd" to="." method="_on_lineedit_pwd_text_changed"]
+[connection signal="focus_entered" from="signup_login" to="signup_login" method="_on_signup_login_focus_entered"]
+[connection signal="focus_exited" from="signup_login" to="signup_login" method="_on_signup_login_focus_exited"]
+[connection signal="mouse_entered" from="signup_login" to="signup_login" method="_on_signup_login_mouse_entered"]
+[connection signal="mouse_exited" from="signup_login" to="signup_login" method="_on_signup_login_mouse_exited"]
+[connection signal="focus_entered" from="signup_pwd" to="signup_pwd" method="_on_signup_pwd_focus_entered"]
+[connection signal="focus_exited" from="signup_pwd" to="signup_pwd" method="_on_signup_pwd_focus_exited"]
+[connection signal="mouse_entered" from="signup_pwd" to="signup_pwd" method="_on_signup_pwd_mouse_entered"]
+[connection signal="mouse_exited" from="signup_pwd" to="signup_pwd" method="_on_signup_pwd_mouse_exited"]
+[connection signal="focus_entered" from="signup_pwd2" to="signup_pwd2" method="_on_signup_pwd2_focus_entered"]
+[connection signal="focus_exited" from="signup_pwd2" to="signup_pwd2" method="_on_signup_pwd2_focus_exited"]
+[connection signal="mouse_entered" from="signup_pwd2" to="signup_pwd2" method="_on_signup_pwd2_mouse_entered"]
+[connection signal="mouse_exited" from="signup_pwd2" to="signup_pwd2" method="_on_signup_pwd2_mouse_exited"]
+[connection signal="focus_entered" from="signup_email" to="signup_email" method="_on_signup_email_focus_entered"]
+[connection signal="focus_exited" from="signup_email" to="signup_email" method="_on_signup_email_focus_exited"]
+[connection signal="mouse_entered" from="signup_email" to="signup_email" method="_on_signup_email_mouse_entered"]
+[connection signal="mouse_exited" from="signup_email" to="signup_email" method="_on_signup_email_mouse_exited"]
+[connection signal="pressed" from="button_validate_signup" to="." method="_on_button_validate_signup_pressed"]
+[connection signal="request_completed" from="button_validate_signup/HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="button_goback_login" to="." method="_on_button_goback_login_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="value_changed" from="SliderMenu" to="SliderMenu" method="_on_SliderMenu_value_changed"]
